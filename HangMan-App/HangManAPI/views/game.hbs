@@ -1,0 +1,11 @@
+{{#if loggedInUser }}
+  <h4>Welcome, {{ loggedInUser.username}}!</h4>
+  {{else }}
+  <h4>Welcome, Guest!</h4>
+{{/if }}
+
+<a href="/categories" class="mui-btn mui-btn--raised">New Category</a></button>
+
+{{#if loggedInUser }}
+  <a href="/logout" class="mui-btn mui-btn--raised mui--pull-right">Logout</a>
+{{/if}}

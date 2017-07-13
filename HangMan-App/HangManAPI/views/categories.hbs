@@ -1,0 +1,27 @@
+<div class="mui-container-fluid">
+  <div class="mui-col-md-4 mui-col-md-offset-4">
+    <div class="mui-panel" style="margin-top: 300px;">
+      <div class="categories" style="text-align: center">
+        <div class="username" style="text-align: left">
+
+        {{#if loggedInUser }}
+          <h4>Welcome, {{ loggedInUser.username }}!</h4>
+        {{else }}
+          <h4>Welcome, Guest!</h4>
+        {{/if }}
+      </div>
+
+      {{#if loggedInUser }}
+        <div style="margin-bottom: 70px">
+          <a href="/logout" class="mui-btn mui-btn--raised mui--pull-right">Logout</a>
+        </div>
+      {{/if}}
+
+        <h3>Choose your Category</h3><br>
+          <a href="/game?categoryIsMovies"><button>Movies</a></button>
+          <a href="/game?categoryIsFood"><button>Food</a></button>
+          <a href="/game?categoryIsVideogames"><button>Video Games</a></button>
+      </div>
+    </div>
+  </div>
+</div>

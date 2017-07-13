@@ -1,0 +1,23 @@
+
+
+<div class="mui-row">
+  <div class="mui-container-fluid">
+    <div class="mui-col-md-4 mui-col-md-offset-4">
+      <div class = "mui-panel" style="margin-top: 300px; margin-left: 50px; padding: 30px;">
+{{#if loggedInUser }}
+  <h4>Welcome, {{ loggedInUser.username }}!</h4>
+{{else }}
+  <h4>Welcome, Guest!</h4>
+{{/if }}
+
+{{#if loggedInUser }}
+  <div style="margin-bottom: 70px">
+    <a href="/logout" class="mui-btn mui-btn--raised mui--pull-right">Logout</a>
+  </div>
+{{/if}}
+
+<h3 style="text-align: center">Select number of players</h3>
+<div style="text-align: center">
+  <a href="/categories?numOfPlayers=1"><button type="submit">1 Player</a></button>
+  <a href="/categories?numOfPlayers=2"><button type="submit">2 Players</a></button>
+</div>
